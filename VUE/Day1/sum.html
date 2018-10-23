@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function sum(start,end){
+			//开始 结束
+			var result=0;
+			//定义和
+			for(var i = start;i<=end;i++) {
+				result=result+i;
+				//循环累加
+			}
+			return result;
+			//返回值
+		}
+		var start=prompt('请输入开始的数',0);
+		var end=prompt('请输入结束的数',0);
+		//转换为数值
+		start=Number(start);
+		end=Number(end);
+		//调用
+		var heji=sum(start,end);
+		//输出和
+		alert(heji);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

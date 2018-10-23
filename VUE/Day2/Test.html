@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 事件循环绑定
+         数组常用方法
+         操纵Dom。script放最后边
+         函数不写return 返回结果undefined
+         return：1.返回结果给外界 不写return时 默认返回undefined 2.打断函数执行（跳出）
+         数组末尾添加项（类型不限）：push()
+
+         var 出的东西，在window下
+         console .log(qqq);不会报错
+         var qqq=123;
+         console.log(qqq);
+
+         var qqq=123;
+         var qqq=1234;可声明多次
+         let aaa=123;一个作用域只能let一次 可改值、
+
+         常量
+         const bbb=12;只能const一次 不可改值
+
+         var声明后不能let
+          -->
+</body>
+
+<script>
+    // for in循环（用来循环对象）
+    var obj ={name:'zf',age:9};
+    for(var k in obj)
+    {
+        // k 对象中的属性名
+        console.log(k);
+        // console.log(typeof(k));
+        var a='age';
+        console.log(obj[k]); //输出对象内容
+
+        // obj.a==obj['a']
+
+        console.log(obj[a]);//9
+
+
+        // 数组添加最后一项
+        var ary =[1,2,3];
+        ary[3]=4;
+        ary.push(5,6,7,8);//给数组的末尾添加项（函数）返回值为数组长度
+        console.log(ary);
+        ary.pop();//删除数组最后一项  返回值删除前最后一项
+        console.log(ary.pop());
+
+        // 数组添加首项
+        var n = ary.unshift(100);
+        console.log(n);//数组长度
+        // 数组移除首项  返回值删除前第一项
+        var n = ary.shift(100);
+        // 数组排序  sort(回调函数) 返回结果 排序后的数组
+        ary = [65,34,688,456,8908];
+        ary.sort(function (a,b) {
+        return b-a;//a-b升序  b-a降序
+        })
+        
+        // var ary = [];
+        // var ary2 = [];
+        // var ary3 = ary2;
+        // console.log(ary == ary2)
+        // false
+
+
+        // ary = [65,34,688,456,8908];
+        // var ary3 = ary.sort(function (a,b) {
+        // return a -b;
+        // //返回值a - b 就是一个升序
+        // // 返回 b-a 就是一个降序
+        // })//sort 的返回结果是排好序之后的数组
+        // console.log(ary3 === ary)
+
+        // ary.reverse() 翻转数组  返回结果跟原数组是一个地址
+
+
+        //ary.forEach
+        // ary = [10,20,30,40];
+        // ary.forEach(function (item,index) {
+        // 用来循环数组的
+        // item 是循环的数组的每一项
+        //index 是循环的每一项的索引
+        // })
+
+        ary = [10,20,30,40];
+        // filter:过滤 返回新数组
+        // var ary2=ary.filter(function(item,index){return true});返回原数组一样的新数组
+        // var ary2=ary.filter(function(item,index){return false});[]
+        // var ary2=ary.filter(function(item,index){return item});30；40
+    }
+</script>
+</html>
